@@ -1,7 +1,7 @@
 // Level 2 Configuration file: M. Benjamin
 
 ServerHost = localhost
-ServerPort = 9000
+ServerPort = 9005
 Simulator  = true
 
 Community  = alder
@@ -18,19 +18,20 @@ ProcessConfig = ANTLER
   MSBetweenLaunches = 200
 
   Run = MOOSDB		@ NewConsole = false
-  Run = uSimMarine	@ NewConsole = false
+  Run = uSimMarineV22	@ NewConsole = false
   Run = pNodeReporter	@ NewConsole = false
-  Run = pMarinePID	@ NewConsole = false
+  Run = pMarinePIDV22	@ NewConsole = false
   Run = pMarineViewer	@ NewConsole = false
   Run = uProcessWatch   @ NewConsole = false
   Run = pHelmIvP	@ NewConsole = false
   Run = pOdometry	@ NewConsole = false
+  //Run = pLogger @ NewConsole = false
 }
 
 //------------------------------------------
-// uSimMarine config block
+// uSimMarineV22 config block
 
-ProcessConfig = uSimMarine
+ProcessConfig = uSimMarineV22
 {
   AppTick	= 10
   CommsTick	= 10
@@ -84,9 +85,9 @@ ProcessConfig = pHelmIvP
 }
 
 //------------------------------------------
-// pMarinePID config block
+// pMarinePIDV22 config block
 
-ProcessConfig = pMarinePID
+ProcessConfig = pMarinePIDV22
 {
   AppTick    = 20
   CommsTick  = 20
@@ -157,3 +158,15 @@ ProcessConfig = pNodeReporter
   CommsTick	= 2
   VESSEL_TYPE   = KAYAK
 }
+
+
+//------------------------------------------
+// pLogger config block
+ ProcessConfig = pLogger
+ {
+   AppTick   = 8
+   CommsTick = 8
+
+   AsyncLog = true
+   WildCardLogging = true
+ }
