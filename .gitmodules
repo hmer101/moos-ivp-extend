@@ -1,0 +1,3 @@
+[submodule "src/moos-utils"]
+	path = src/moos-utils
+	url = https://github.com/maheshkaran/moos-utils.git
